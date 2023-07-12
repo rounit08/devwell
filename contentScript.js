@@ -37,8 +37,6 @@ function getRandomImageIndex() {
   imageIndex = Math.floor(Math.random() * imageUrls.length);
 }
 
-// ...
-
 function updateActiveTime() {
   const currentTime = new Date();
   const activeTime = Math.floor((currentTime - startTime) / 1000); // in seconds
@@ -54,8 +52,6 @@ function updateActiveTime() {
   const activeTimeElement = document.getElementById("active-time");
   activeTimeElement.textContent = `Surfing Time: ${formattedTime}`;
 }
-
-// ...
 
 document.addEventListener("DOMContentLoaded", () => {
   getRandomImageIndex();

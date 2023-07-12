@@ -13,7 +13,7 @@ chrome.runtime.onInstalled.addListener(() => {
 function startPopupTimer() {
   intervalId = setInterval(() => {
     showPopup();
-  }, 20000);
+  }, 90 * 60 * 1000);
 }
 
 function stopPopupTimer() {
