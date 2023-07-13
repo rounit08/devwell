@@ -92,7 +92,7 @@ body {
 
 #active-time {
   margin-left: 20%;
-
+  align-items: center;
   transition: 0.5s;
   font-size: 25px;
   font-family: "Chokokutai", cursive;

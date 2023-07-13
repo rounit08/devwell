@@ -1,19 +1,11 @@
+
+
 let startTime;
 let intervalId;
 let panelWindowId;
 
-chrome.runtime.onStartup.addListener(() => {
-  startTime = Date.now();
-});
-
-chrome.runtime.onInstalled.addListener(() => {
-  startPopupTimer();
-});
-
 function startPopupTimer() {
-  intervalId = setInterval(() => {
-    showPopup();
-  }, 90 * 60 * 1000);
+  intervalId = setInterval(showPopup, 90 * 60 * 1000);
 }
 
 function stopPopupTimer() {
@@ -38,6 +30,14 @@ function showPopup() {
   }
 }
 
+chrome.runtime.onStartup.addListener(() => {
+  startTime = Date.now();
+});
+
+chrome.runtime.onInstalled.addListener(() => {
+  startPopupTimer();
+});
+
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message === "getStartTime") {
     sendResponse({ startTime: startTime });
@@ -57,8 +57,11 @@ chrome.runtime.onInstalled.addListener(() => {
   startTime = Date.now();
 });
 
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  if (message === "getStartTime") {
-    sendResponse({ startTime: startTime });
-  }
-});
+// Periodically update the active time
+setInterval(() => {
+  chrome.tabs.query({}, (tabs) => {
+    tabs.forEach((tab) => {
+      chrome.tabs.sendMessage(tab.id, { updateActiveTime: true });
+    });
+  });
+}, 1000);

@@ -1,8 +1,10 @@
+
+
 let imageIndex = 0;
 const imageUrls = [
   {
     url: "image1.gif",
-    text: "Relaxes the neck pain due to continous work.",
+    text: "Relaxes the neck pain due to continuous work.",
   },
   {
     url: "image2.gif",
@@ -37,9 +39,10 @@ function getRandomImageIndex() {
   imageIndex = Math.floor(Math.random() * imageUrls.length);
 }
 
+
 function updateActiveTime() {
   const currentTime = new Date();
-  const activeTime = Math.floor((currentTime - startTime) / 1000); // in seconds
+  const activeTime = Math.floor((currentTime - startTime) / 1000); 
 
   const hours = Math.floor(activeTime / 3600);
   const minutes = Math.floor((activeTime % 3600) / 60);
@@ -60,11 +63,14 @@ document.addEventListener("DOMContentLoaded", () => {
   chrome.runtime.sendMessage("getStartTime", (response) => {
     startTime = new Date(response.startTime);
     updateActiveTime();
-    intervalId = setInterval(updateActiveTime, 1000); // update every second
+    intervalId = setInterval(updateActiveTime, 1000);
   });
 });
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.updateActiveTime) {
+    updateActiveTime();
+  }
   if (message === "nextImage") {
     getRandomImageIndex();
     updateImage();
