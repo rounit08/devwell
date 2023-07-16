@@ -9,11 +9,11 @@
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": ["storage", "scripting", "tabs", "activeTab"],
+  "permissions": ["activeTab"],
   "icons": {
     "16": "ext.png",
     "48": "ext.png",
     "128": "ext.png",
     "256": "ext.png"
-    }
+  }
 }
