@@ -9,7 +9,7 @@
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": ["activeTab"],
+  "permissions": ["tabs"],
   "icons": {
     "16": "ext.png",
     "48": "ext.png",
