@@ -12,23 +12,21 @@ function stopPopupTimer() {
   clearInterval(intervalId);
 }
 
+
 function showPopup() {
-  if (panelWindowId) {
-    chrome.windows.update(panelWindowId, { focused: true });
-  } else {
-    chrome.windows.create(
-      {
-        url: "devwell.html",
-        type: "panel",
-        width: 340,
-        height: 560,
-      },
-      (window) => {
-        panelWindowId = window.id;
-      }
-    );
-  }
+  chrome.windows.create(
+    {
+      url: "devwell.html",
+      type: "panel",
+      width: 340,
+      height: 560,
+    },
+    (window) => {
+      panelWindowId = window.id;
+    }
+  );
 }
+
 
 chrome.runtime.onStartup.addListener(() => {
   startTime = Date.now();
