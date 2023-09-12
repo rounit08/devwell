@@ -47,17 +47,6 @@ Once the DevWell Chrome Extension is installed, you can start using it right awa
 
 3. You will also receive periodic reminders to drink water to stay hydrated.
 
-4. You can customize the extension's settings by clicking on its icon in the Chrome toolbar and selecting "Options."
-
-## Customization
-
-To customize the DevWell Chrome Extension, click on its icon in the Chrome toolbar and select "Options." From there, you can:
-
-- Adjust the frequency of exercise and water reminders.
-
-- Choose different exercises and GIFs for the reminders.
-
-- Modify other settings to suit your preferences.
 
 ## Feedback and Contributions
 
