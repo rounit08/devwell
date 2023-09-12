@@ -3,7 +3,6 @@
 
 **Author**: Rounit Sinha
 **Version**: 1.0
-**Last Updated**: September 12, 2023
 
 ## Overview
 
