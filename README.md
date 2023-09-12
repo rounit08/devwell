@@ -19,9 +19,16 @@ The DevWell Chrome Extension is a productivity tool designed to help developers 
 
 3. **Background Tab Monitoring**: DevWell tracks the time spent on open browser tabs, ensuring that reminders are spaced out optimally to avoid interruptions during critical work moments.
 
-4. **Customizable Settings**: Users can customize the frequency of reminders, exercise suggestions, and GIFs to cater to their preferences and needs.
+   
+
 
 ## Installation
+
+For All :
+
+Go directly to the chrome extension store and searvh - Devwell or go to this link - <a href="https://chrome.google.com/webstore/detail/devwell/olfgelkmhpkkkoejdmjllmkfdfhbcpec/related?utm_source=google&utm_medium=cpc&utm_campaign=20282050520&utm_content=151103784475&utm_term=chrome%20extensions&gclid=CjwKCAjw5MOlBhBTEiwAAJ8e1k6zrZUUJvMhEAaF7oxnZYH">Devwell</a>
+
+For Developers:
 
 To install the DevWell Chrome Extension, follow these steps:
 
